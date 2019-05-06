@@ -1,7 +1,9 @@
 
 all:
 	pdflatex asexuality.tex
-	rm asexuality.aux
+	bibtex asexuality
+	pdflatex asexuality.tex
+	pdflatex asexuality.tex
 
 open:
 	make all
